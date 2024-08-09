@@ -2,7 +2,6 @@ import 'package:expense_tracker/widgets/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/models/expense.dart';
-import 'package:expense_tracker/models/category.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -12,44 +11,21 @@ class Expenses extends StatefulWidget {
 }
 
 class _ExpensesState extends State<Expenses> {
-  final List<Expense> _registeredExpenses = [
-    Expense(
-        title: 'Native mobile development course',
-        amount: 19.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.work),
-    Expense(
-        title: 'Native android development course',
-        amount: 5893.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.food),
-    Expense(
-        title: 'Native tv development course',
-        amount: 39.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.lesiure),
-    Expense(
-        title: 'Native tv development course',
-        amount: 39.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.travel),
-    Expense(
-        title: 'Native tv development course',
-        amount: 39.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.lesiure),
-    Expense(
-        title: 'Native tv development course',
-        amount: 39.99,
-        time: DateTime.now(),
-        category: ExpenseCategory.lesiure),
-  ];
+  final List<Expense> _registeredExpenses = [];
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
       context: context,
-      builder: (ctx) => const NewExpense(),
+      builder: (ctx) => NewExpense(
+        onAddExpense: _addExpense,
+      ),
     );
+  }
+
+  void _addExpense(Expense expense) {
+    setState(() {
+      _registeredExpenses.add(expense);
+    });
   }
 
   @override
