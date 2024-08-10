@@ -6,6 +6,8 @@ void main() {
   runApp(
     MaterialApp(
       theme: themeData,
+      darkTheme: darkThemeData,
+      themeMode: ThemeMode.system,
       home: const Expenses(),
     ),
   );
