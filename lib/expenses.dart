@@ -1,4 +1,5 @@
 import 'package:expense_tracker/models/category.dart';
+import 'package:expense_tracker/widgets/chart.dart';
 import 'package:expense_tracker/widgets/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,12 @@ class _ExpensesState extends State<Expenses> {
         title: "Test Expense",
         amount: 23,
         time: DateTime.now(),
-        category: ExpenseCategory.food)
+        category: ExpenseCategory.food),
+    Expense(
+        title: "Mobile",
+        amount: 203,
+        time: DateTime.now(),
+        category: ExpenseCategory.work),
   ];
 
   void _openAddExpenseOverlay() {
@@ -85,7 +91,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text("The chart"),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           )
