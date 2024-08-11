@@ -1,16 +1,9 @@
-# expense_tracker
+# Expense Tracker :tada: :rocket:
+A simple expense tracker application to track and visualise the expenseses made by the user.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots of the screen
+<img src="https://github.com/user-attachments/assets/5dc8fd06-96fc-46e5-a388-7038594f46fc" width="250px" height="500px" />
+<img src="https://github.com/user-attachments/assets/9b5da211-0a21-4ff9-b5df-faac1bf62c5b" width="250px" height="500px" />
+<img src="https://github.com/user-attachments/assets/d4fc3486-613e-4cbd-a986-48abef8464d9" width="250px" height="500px" />
+<img src="https://github.com/user-attachments/assets/595c72bd-de0d-4b00-9730-efedab71d89b" width="250px" height="500px" />
+<img src="https://github.com/user-attachments/assets/93365a6f-c155-4a61-8d1a-9511b16de84d" width="250px" height="500px" />
